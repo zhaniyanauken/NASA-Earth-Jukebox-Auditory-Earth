@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230f172a' stroke='%2300f2fe' stroke-width='4'/><path d='M30 50 Q50 20 70 50 T90 50' fill='none' stroke='%2310b981' stroke-width='4'/><circle cx='50' cy='50' r='10' fill='%23f59e0b'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NASA Earth Jukebox — Interactive multisensory data sonification system of NASA Earth Information Center (SVS #40509 Earth Now Dashboard) for blind and visually impaired explorers with air-gesture tracking and Wally AI voice assistant." />
+    <title>NASA Earth Jukebox — Auditory Earth | NASA Earth Now Dashboard</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- MediaPipe Hands and Camera Utils via CDN for robust real-time gesture tracking -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.4/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

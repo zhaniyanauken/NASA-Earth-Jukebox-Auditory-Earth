@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  --bg-space: #0A0F1D;
+  --bg-card: #0F172A;
+  --bg-card-hover: #1E293B;
+  --border-subtle: #1E293B;
+  --border-glow: #38BDF8;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --cyan-nasa: #38BDF8;
+  --blue-nasa: #0284C7;
+  --amber-nasa: #F59E0B;
+  --emerald-nasa: #10B981;
+  --crimson-nasa: #EF4444;
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* High Contrast Mode for Screen Readers and Low Vision */
+body.high-contrast {
+  --bg-space: #000000;
+  --bg-card: #000000;
+  --bg-card-hover: #1a1a1a;
+  --border-subtle: #FFFF00;
+  --border-glow: #FFFF00;
+  --text-main: #FFFFFF;
+  --text-muted: #FFFF00;
+  --cyan-nasa: #FFFF00;
+  --blue-nasa: #00FFFF;
+  --amber-nasa: #FFFF00;
+  --emerald-nasa: #00FF00;
+  --crimson-nasa: #FF3333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-space);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cyan-nasa) !important;
+  outline-offset: 2px !important;
+}
+
+/* STANDARD HEADER: Like normal clean modern sites, no neon */
+.standard-header {
+  background-color: #0F172A;
+  border-bottom: 1px solid #1E293B;
+  width: 100%;
+}
+
+.header-cam-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  color: #E2E8F0;
+  background-color: #1E293B;
+  border: 1px solid #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.header-cam-btn:hover {
+  background-color: #334155;
+  color: #FFFFFF;
+}
+
+.header-cam-btn-active {
+  background-color: #0284C7;
+  border-color: #0284C7;
+  color: #FFFFFF;
+}
+
+.header-cam-btn-active:hover {
+  background-color: #0369A1;
+}
+
+/* Scientific Card: Clean, subtle border, minimal distraction */
+.scientific-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: border-color 0.2s ease;
+}
+
+/* Legacy alias */
+.glass-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+}
+
+/* Scientific Action Buttons */
+.btn-scientific,
+.btn-nasa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.42rem 0.85rem;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid #334155;
+  background: #1E293B;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.btn-scientific:hover,
+.btn-nasa:hover {
+  background: #334155;
+  color: #FFFFFF;
+}
+
+.btn-scientific:active,
+.btn-nasa:active {
+  transform: translateY(1px);
+}
+
+.btn-scientific-primary,
+.btn-nasa-primary {
+  background: #0284C7;
+  color: #FFFFFF;
+  border: 1px solid #0284C7;
+  font-weight: 600;
+}
+
+.btn-scientific-primary:hover,
+.btn-nasa-primary:hover {
+  background: #0369A1;
+  color: #FFFFFF;
+}
+
+.btn-scientific-active,
+.btn-nasa-active {
+  border-color: #38BDF8;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38BDF8;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Clean Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0F1D;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
